@@ -51,6 +51,22 @@ eventHub.addEventListener("click", eventObj => {
     }
 })
 
+eventHub.addEventListener("click", eventObj => {
+    if(event.target.id === "gameTicket" ||
+    event.target.id === "rideTicket" ||
+    event.target.id === "sideshowTicket" ||
+    event.target.id === "foodTicket" ||
+    event.target.id === "fullPackageTicket"
+    ) {
+
+        const ticketEvent = new CustomEvent ("ticketPurchased")
+
+    eventHub.dispatchEvent(ticketEvent)
+
+    }
+})
+
+
 export const TicketBooth = () => {
     contentTarget.innerHTML = `
         <div class="ticketBooth">
