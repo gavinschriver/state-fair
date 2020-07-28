@@ -51,6 +51,17 @@ eventHub.addEventListener("click", eventObj => {
     }
 })
 
+eventHub.addEventListener("click", eventObj => {
+    if(event.target.className === "ticketBooth") {
+
+        const ticketEvent = new CustomEvent ("ticketPurchased")
+
+    eventHub.dispatchEvent(ticketEvent)
+
+    }
+})
+
+
 export const TicketBooth = () => {
     contentTarget.innerHTML = `
         <div class="ticketBooth">
