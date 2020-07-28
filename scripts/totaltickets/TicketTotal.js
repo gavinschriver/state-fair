@@ -8,9 +8,8 @@ contentTarget.innerHTML = `Total Tickets: ${someVar}`
 
 export const TicketTotal = () => {
     eventHub.addEventListener("ticketPurchased", customEvent => {
-        someVar++
-        
-        contentTarget.innerHTML = `Total Tickets: ${someVar}
-        `
+        console.log(customEvent.detail)
+        someVar = someVar + parseInt(customEvent.detail.ticketCount)        
+        contentTarget.innerHTML = `Total Tickets: ${someVar}`
     })
 }
