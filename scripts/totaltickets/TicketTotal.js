@@ -7,7 +7,7 @@ let someVar = 0
 contentTarget.innerHTML = `Total Tickets: ${someVar}` 
 
 export const TicketTotal = () => {
-    eventHub.addEventListener("gameTicketPurchased", customEvent => {
+    eventHub.addEventListener("ticketPurchased", customEvent => {
         someVar++
         
         contentTarget.innerHTML = `Total Tickets: ${someVar}
