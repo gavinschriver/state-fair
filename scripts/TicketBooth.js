@@ -52,7 +52,7 @@ eventHub.addEventListener("click", eventObj => {
 })
 
 eventHub.addEventListener("click", eventObj => {
-    if(event.target.className === "ticketBooth") {
+    if(event.target.id === "gameTicket") {
 
         const ticketEvent = new CustomEvent ("ticketPurchased")
 
