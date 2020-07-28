@@ -1,4 +1,4 @@
-const contentTarget = document.querySelector(".customers")
+const contentTarget = document.querySelector(".counter")
 const eventHub = document.querySelector("#state-fair")
 
 let someVar = 0
